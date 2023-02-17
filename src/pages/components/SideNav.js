@@ -5,6 +5,8 @@ import NavItem from './NavItem'
 import supabase from "../../supabase";
 import { useNavigate } from "react-router-dom"
 import { IsAuthed } from "./RequireAuth";
+import icon64 from '../../logos/qena64.png'
+import icon192 from '../../logos/qena192.png'
 
 // Current Classes - Implemented later
 const classItems = [
@@ -60,8 +62,8 @@ export default function SideNav() {
                 as="nav"
             >
                 {/* Logos for expanded and compact sidebar */}
-                <Image mt={4} src='/qena192.png' display={open ? "flex" : "none"}/>
-                <Image mt={4} src='/qena64.png' display={open ? "none" : "flex"}/>
+                <Image mt={4} src={icon192} display={open ? "flex" : "none"} />
+                <Image mt={4} src={icon64} display={open ? "none" : "flex"} />
                 {/* Hamburger button */}
                 <IconButton
                     background="none"
